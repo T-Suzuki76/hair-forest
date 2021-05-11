@@ -1,0 +1,799 @@
+@charset "utf-8";
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: normal;
+}
+
+
+#l-header{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../images/メインビジュアル.png);
+    z-index: 1;
+}
+
+.c-header-mainVisual-eyecatch{
+    position: absolute;
+    margin: 409px 904px 16px 9px;
+    z-index: 2;
+}
+
+
+.p-header-nav{
+    position: absolute;
+    width: 100%;
+    height: 114px;
+}
+
+.c-header-img{
+    position: absolute;
+    padding-top: 24px;
+    padding-left: 14px;
+    z-index: 3;
+} 
+
+.c-header-hamburger-menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(50,50,50,0.5);
+    margin: 0 0 0 auto;
+    z-index: 100;
+    transition: ease 0.5s;
+    
+}
+.c-header-hamburger-menu>.c-header-hamburger-line{
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    width:21px;
+    background: white;
+    transition: all .5s;
+    z-index: 6;
+}
+.c-header-hamburger-menu>.c-header-hamburger-line::before,
+.c-header-hamburger-menu>.c-header-hamburger-line::after{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 21px;
+    background: white;
+    transition: all .5s;
+}
+.c-header-hamburger-line::before{
+    transform: translateY(-8px);
+}
+.c-header-hamburger-line::after{
+    transform: translateY(6px);
+}
+
+
+.c-header-hamburger-menu.open .c-header-hamburger-line{
+    background-color: transparent;
+}
+.c-header-hamburger-menu.open .c-header-hamburger-line::before{
+    transform: translateY(1px)rotate(45deg);
+}
+.c-header-hamburger-menu.open .c-header-hamburger-line::after{
+    transform: translateY(-1px)rotate(-45deg);
+}
+.c-header-hamburger-menu.open{
+    background-color: rgba(50, 50, 50, 0);
+    transition: ease 0.5s;
+}
+
+.c-header-drawer-menu{
+    position: fixed;
+    top:0;
+    right: -400px;
+    width: 236px;
+    height: 426px;
+    padding-bottom: 32px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    z-index: 5;
+    transition: ease 0.7s;
+}
+
+.c-header-drawer-menu.open{
+    right: 0;
+    transition: ease 0.5s;
+}
+
+.c-header-drawer-menu a{
+    text-decoration: none;
+    color: white;
+}
+.c-header-drawer-menu a:hover{
+    text-decoration:underline;
+}
+
+.c-header-drawer-menu a:visited{
+    color: white;
+}
+
+.c-header-drawer-menu ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 32px;
+}
+
+.c-header-drawer-menu li{
+    margin-top: 32px;
+    font-size: 18px;
+}
+
+.l-contentsArea{
+    width: 730px;
+    margin: 0 auto;
+}
+
+.c-booking-btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: #5DC1CF;
+    border-radius: 4px;
+    border: none;
+}
+.p-booking > .c-booking-btn{
+    width: 726px;
+    margin-top: 48px;
+    padding-top: 10px;
+    padding-bottom: 9px;
+    padding-left: 3px;
+    font-size: 18px;
+}
+
+.c-booking-status{
+    display: inline-flex;
+    width: 100%;
+    margin: 14px 0px 5px 0px;
+}
+
+.c-border-title{
+    display: inline-flex;
+}
+.c-border-title>p{
+    display: inline-block;
+    font-size: 14px;
+    margin: 0px;
+}
+
+.c-border::before{
+    display: inline-block;
+    content: "";
+    margin-right: 4px;
+    height: 14px;
+    width: 4px;
+    background-color: black;
+}
+
+.c-booking-status-phone-num{
+    display: flex;
+    font-size: 12px;
+    margin: 0 0 0 auto;
+}
+.c-booking-status-phone-num>p{
+    height: 14px;
+    margin: 0px;
+    padding-top: 2px;
+}
+
+.c-booking-status-phone-num>.fa-phone-alt{
+    margin-right: 4px;
+    font-size: 9px;
+    padding-top: 7px;
+}
+
+
+.c-booking-schedule{
+    margin: 1px;
+    width: 729px;
+    height: 79px;
+    line-height: normal;
+    text-align: center;
+}
+
+table,tr,th{
+    height: 38px;
+    border: 1px solid #C3C3C3;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    padding: 0px;
+}
+
+.weekend ,.status{
+    color: #CC5777;
+}
+
+.holiday{
+    opacity: 0.3;
+}
+
+
+.p-hairStyle{
+    margin-top: 47px;
+    text-align: center;
+}
+
+.c-heading{
+    text-align: center;
+    height: 51px;
+}
+
+.c-heading h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 34px;
+    height: 37px;
+    font-weight: normal;
+    margin-left: 1px;
+    margin-bottom: 0px;
+    padding-right: 1px;
+    padding-top: 1px;
+}
+
+.c-heading p{
+    margin: 0px;
+    line-height: 13px;
+    font-size: 12px;
+}
+
+
+.c-grid-catalog{
+    margin-top: 17px;
+    margin-bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.c-grid-catalog>img{
+    filter: brightness(102%) contrast(100%);
+    mix-blend-mode: soft-light;
+    opacity: 0.8;
+}
+
+.c-instagram-btn{
+    display: block;
+    width: 339px;
+    text-decoration: none;
+    margin:0px 192px 0px 193px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    font-size: 14px;
+    background-color: white;
+    border: 2px solid #5DC1CF;
+    color: black;
+
+}
+
+.instagram-btn:visited{
+    color: black;
+    text-decoration: none;
+}
+
+.fa-instagram{
+    font-size: 27px;
+    margin:1px 8px 2px 0px;
+    vertical-align: middle;
+}
+
+
+.p-info{
+    height: fit-content;
+    margin-top: 46px;
+}
+
+.c-info-list{
+    /* width: 100%; */
+    margin-top: 16px;
+    border-bottom: 1px solid #F3F3F3;
+}
+
+.c-info-list ul{
+    list-style: none;
+    padding-left: 0px;
+    /* margin: 0px; */
+}
+
+.c-list-day{
+    list-style: none;
+    font-size: 12px;
+}
+
+.c-list-detail{
+    list-style: none;
+    font-size: 14px;
+    padding-top: 0px;
+    letter-spacing: 1px;
+}
+
+.p-info a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 18px;
+    text-align: right;
+    color: #5DC1CF;
+    font-size: 14px;
+    margin-top: 14px;
+}
+.p-info span{
+    margin-left: 7px;
+}
+
+
+.l-couponArea{
+    width: 100%;
+    background-color: #F0F0F0;
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    box-sizing: border-box;
+}
+
+
+.c-coupon-title{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
+.c-coupon-flexbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 27px;
+    margin-bottom: 32px;
+}
+
+.c-coupon-menu{
+    width: 209px;
+    height: 176px;
+    padding: 12px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.u-coupon-detail{
+    width: 185px;
+    height: 100px;
+    line-height: 1.5;
+    margin-bottom: 21px;
+}
+
+
+.c-coupon-menu .c-booking-btn{
+    height: 32px;
+    width: 155px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 32px;
+    margin: 0 auto;
+}
+
+.l-contentsArea h2{
+    font-size: 12px;
+    font-weight: lighter;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.c-coupon-price{
+    margin-top: 8px;
+    height: 25px;
+}
+
+.l-contentsArea h3{
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 0;
+}
+.l-contentsArea h4{
+    display: inline;
+    font-size: 16px;
+    font-weight: lighter;
+}
+.l-contentsArea h5{
+    display: inline;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #CC5777;
+}
+
+
+.c-coupon-link{
+    text-align: right;
+}
+
+.c-coupon-link a{
+    font-size: 13.71px;
+    color: #5DC1CF;
+    text-decoration: none;
+    margin-left: 27px;
+}
+
+.c-coupon-link span{
+    margin-left: 5px;
+}
+
+.bottom-wrapper{
+    width: 730px;
+
+    margin-left: 186px;
+
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.p-banner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 59px;
+}
+
+.p-staff{
+    margin-left:  192px;
+    width: 343px;
+}
+
+.c-staff-list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    margin-bottom: 18px;
+}
+
+.c-staff-position{
+    font-size: 10px;
+    height: 12px;
+    margin: 0px;
+    opacity: 0.6;
+    text-align: center;
+}
+.c-staff-name{
+    font-size: 12px;
+    height: 16px;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    opacity: 0.6;
+    text-align: center;
+}
+
+.c-staff-link{
+    display: block;
+    width: 300px;
+    height: 27px;
+    text-decoration: none;
+    color: #323232;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 1px;
+    padding-top: 7px;
+    padding-left: 32px;
+    padding-right: 9px;
+    text-align: center;
+}
+.c-staff-link img{
+    margin-top: 2px;
+}
+
+.p-bottom-info{
+    text-align: center;
+}
+
+.c-bottom-logo{
+    margin: 48px 0 14px 0;
+    padding-right: 1px;
+}
+.c-bottom-logo p{
+    font-size: 12px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    padding-right: 4px;
+}
+
+.c-store-info{
+    font-size: 14px;
+}
+
+.c-store-info>img{
+    padding-right: 1px;
+}
+
+.c-store-info>p{
+    margin-top: 7px;
+    margin-right: 2px;
+    margin-bottom: 8px;
+    line-height: 25px;
+}
+
+.c-emphasize{
+    font-size: 14px;
+    color: #5DC1CF;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.c-bottom-phone-num{
+    margin-left: 10px;
+}
+.c-bottom-phone-num>.fa-phone-alt{
+    display: inline;
+    font-size: 9px;
+    height: 14px;
+}
+.c-bottom-phone-num p{
+    display: inline;
+    font-size: 14px;
+    height: 14px;
+}
+.c-bottom-phone-num .time{
+    display: block;
+    font-size: 10px;
+    line-height: 11px;
+    margin: 0px;
+}
+
+.c-bottom-icon{
+    padding-right: 0px;
+    margin: 4px 3px 0px 0px;
+}
+
+.c-bottom-sitemap{
+    font-size: 14px;
+}
+
+.c-bottom-sitemap ul{
+    padding-left: 0px;
+    margin-top: 44px;
+    margin-bottom: 58px;
+}
+
+.c-bottom-sitemap li{
+    display: inline;
+    list-style: none;
+    padding-left:0px;
+}
+
+.l-footer{
+    color: #FFFFFF;
+    height: 50px;
+    font-size: 10px;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #323232;
+}
+
+
+@media screen and (max-width:600px){
+
+    .container{
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #l-header{
+        margin: 0;
+        width: 100vw;
+        background-image: url(../images/image1.jpg);
+    }
+
+    .c-header-img{
+        height: 48px;
+        padding-top: 16px;
+    }
+
+    .c-header-drawer-menu{
+        right: -800px;
+        width: 100vw;
+        height: 568px;  
+        background-color: rgba(50, 50, 50, 0.8);
+    }
+
+    .c-header-drawer-menu li{
+        font-size: 24px;
+    }
+
+    .c-header-mainVisual-eyecatch{
+        margin-left: 15px;
+    }
+
+    .l-contentsArea{
+        width: 343px;
+        margin: 0 auto;
+    }
+
+    .c-booking-status{
+        width: 343px;
+        margin: 0 auto;
+        margin-top: 14px;
+        margin-right: 16px;
+        margin-bottom: 6px;
+    }
+
+    .p-booking .c-booking-btn{
+        margin: 0 auto;
+        width: 343px;
+        margin-top: 40px;
+    }
+
+    .c-booking-schedule{
+        width: 343px;
+        margin: 0 auto;
+    }
+
+    table,tr,th{
+        width: 50px;
+        margin: 0 auto;
+    }
+
+    .c-heading{
+        margin-top: 19px;
+    }
+
+    .c-heading h1{
+        margin: 0px;
+    }
+
+    .p-hairStyle{
+        margin: 0px;
+    }
+
+    .p-hairStyle .c-grid-catalog{
+        width: 100%;
+        margin-top: 17px;
+    }
+    .p-hairStyle .c-grid-catalog img{
+        width: 125px;
+        height: 125px;
+    }
+
+    .c-instagram-btn{
+        margin: auto;
+    }
+
+    .p-info{
+        margin-top: 19px;
+    }
+
+    .p-info a{
+        margin-top: 6px;
+    }
+
+    .l-couponArea{
+        padding:0;
+    }
+    .l-couponArea .l-couponArea{
+        margin-top: 36px;
+        margin-bottom: 40px;
+        padding-bottom: 0;
+    }
+
+    .c-coupon-title{
+        width: 375px;
+        padding-top: 16px;
+    }
+
+    .c-coupon-flexbox{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .c-coupon-menu{
+        margin: 0px;
+        margin-bottom: 12px;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .u-coupon-detail{
+        width: 100%;
+        height: fit-content;
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+
+    .c-coupon-price {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 18px;
+    }
+
+    .c-coupon-price h4{
+        font-size: 14px;
+    }
+    .c-coupon-price h5{
+        font-size: 14px;
+    }
+
+    .c-coupon-menu>.c-booking-btn{
+        margin: 0 auto;
+        width: 198px;
+        height: 32px;
+    }
+    .c-coupon-link{
+        padding-bottom: 16px;
+        width: 100%;
+        text-align: right;
+    }
+    
+    .p-banner{
+        margin: 0;
+        height: 280px;
+        flex-direction: column;
+    }
+
+    .p-staff{
+        margin: 0;
+        width: 343px;
+    }
+
+    .p-staff h1{
+        margin-top: 18px;
+    }
+
+    .c-staff-list{
+        margin-bottom: 12px;
+    }
+
+    .c-bottom-logo{
+        margin-top: 20px;
+    }
+
+    .c-store-info img{
+        width: 200px;
+    }
+
+    .c-store-info p{
+        margin: 0 auto;
+        margin-top: 11px;
+        margin-bottom: 12px;
+        margin-left: 38px;
+        line-height: 1.5;
+        width: 280px;
+    }
+    .c-emphasize{
+        margin-bottom: 10px;
+    }
+
+    .bottom-wrapper .bottom-phone-num{
+        margin: 0;
+    }
+
+    .c-sitemap ul{
+        margin-top: 35px;  
+        margin-bottom: 42px;
+    }
+
+    .l-footer{
+        height: fit-content;
+        padding: 18px 48px 19px 49px;
+    }
+}
